@@ -1,14 +1,13 @@
 var Repository = require('./../js/repo.js').repoModule;
 
 var displayRepos = function(repo) {
-  console.log(repo);
-  $('.showRepos').text("aaaAAAAAaaaaa");
-
+  console.log(repo[0].name);
+  $('.showRepos').text(repo[11].name);
+  for (i = 0; i <= repo.lenght; i++) {
+    $('.showRepos').text(repo[i].name);
+  }
 };
 
-for(i = 0; i <= displayRepos.lenght; i++) {
-  $('.showRepos').text("hi" + displayRepos[i].name);
-}
 
 $(document).ready(function() {
   var newUserRepository = new Repository();
