@@ -2,8 +2,13 @@ var Repository = require('./../js/repo.js').repoModule;
 
 var displayRepos = function(repo) {
   console.log(repo);
-  $('.showRepos').text("here it is: " + repo);
+  $('.showRepos').text("aaaAAAAAaaaaa");
+
 };
+
+for(i = 0; i <= displayRepos.lenght; i++) {
+  $('.showRepos').text("hi" + displayRepos[i].name);
+}
 
 $(document).ready(function() {
   var newUserRepository = new Repository();
@@ -11,6 +16,6 @@ $(document).ready(function() {
     event.preventDefault();
     var username = $('#username').val();
     $('#username').val("");
-    var repositories = newUserRepository.getRepos(username, displayRepos);
+    var repositories = newUserRepository.getRepos(displayRepos);
   });
 });
